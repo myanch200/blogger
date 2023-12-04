@@ -79,8 +79,7 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV["POSTGRES_DB"] %>
-  username: <%= ENV["POSTGRES_USER"] %>
-  password: <%= ENV["POSTGRES_ROOT_PASSWORD"] %>
   host: <%= ENV["DB_HOST"] %>
-  port: <%= ENV["POSTGRES_PORT"] %>
+  database: blogger_production
+  username: blogger
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
