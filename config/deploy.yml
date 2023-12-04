@@ -34,6 +34,7 @@ env:
     port: 5432
     env:
       clear:
+        POSTGRES_PORT: 5432
         POSTGRES_USER: "root"
         POSTGRES_DB: "blogger_production"
       secret:
