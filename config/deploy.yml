@@ -2,7 +2,7 @@
 service: my-app
 
 # Name of the container image.
-image: user/my-app
+image: myanch/blogger
 
 # Deploy to these servers.
 servers:
