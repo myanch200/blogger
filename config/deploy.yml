@@ -1,0 +1,46 @@
+# Name of your application. Used to uniquely configure containers.
+service: my-app
+
+# Name of the container image.
+image: user/my-app
+
+# Deploy to these servers.
+servers:
+  - 116.203.37.171
+
+# Credentials for your image host.
+registry:
+  # Specify the registry server, if you're not using Docker Hub
+  # server: registry.digitalocean.com / ghcr.io / ...
+  username: my-user
+
+  # Always use an access token rather than real password when possible.
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+# Inject ENV variables into containers (secrets come from .env).
+# Remember to run `kamal env push` after making changes!
+env:
+  clear:
+    DB_HOST: 195.201.3.254
+  secret:
+    - RAILS_MASTER_KEY
+    - POSTGRES_ROOT_PASSWORD
+
+  db:
+    image: postgres:14
+    host: 195.201.3.254
+    port: 3306
+    env:
+      clear:
+        - POSTGRES_USER
+        - POSTGRES_PASSWORD
+        - POSTGRES_DB
+        
+      secret:
+        - POSTGRES_ROOT_PASSWORD
+    files:
+      - config/postgres/production.cnf:/etc/postgres/my.cnf
+      - db/production.sql:/docker-entrypoint-initdb.d/setup.sql
+    directories:
+      - data:/var/lib/postgres
