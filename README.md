@@ -1,24 +1,7 @@
-# README
+# Blogger
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A sample app that tests deployment to hetzner using Docker and kamal
 
-Things you may want to cover:
+Many thanks to @tannakartikey for the amazing article that helped me fix my postgres issue
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Check out his repo [here]('https://github.com/tannakartikey/rails_71_mrsk_deploy')
