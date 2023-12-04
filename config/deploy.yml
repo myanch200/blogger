@@ -30,7 +30,7 @@ env:
 
 accessories:
   db:
-    image: postgres:14
+    image: postgres:16.1
     host: 195.201.3.254
     port: 5432
     env:
