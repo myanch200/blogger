@@ -31,7 +31,7 @@ env:
   db:
     image: postgres:14
     host: 195.201.3.254
-    port: 3306
+    port: 5432
     env:
       clear:
         - POSTGRES_USER
