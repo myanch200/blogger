@@ -79,7 +79,7 @@ test:
 #
 production:
   <<: *default
-  host: ENV["DB_HOST"]
   database: blogger_production
   username: root
   password: <%= ENV["POSTGRES_ROOT_PASSWORD"] %>
+  host: <%= ENV["DB_HOST"] %>
