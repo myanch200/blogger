@@ -3,7 +3,7 @@ image:  myanch200/blogger
 
 servers:
   web:
-    - 195.201.3.254
+    - 37.27.12.123
 
 registry:
   username: myanch200
@@ -12,7 +12,7 @@ registry:
 
 env:
   clear:
-    DB_HOST: 116.203.37.171
+    DB_HOST: 65.21.188.160
   secret:
     - RAILS_MASTER_KEY
     - POSTGRES_PASSWORD
@@ -20,7 +20,7 @@ env:
 accessories:
   db:
     image: postgres:15
-    host: 116.203.37.171
+    host: 65.21.188.160
     port: 5432
     env:
       clear:
