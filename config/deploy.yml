@@ -41,7 +41,6 @@ accessories:
       secret:
         - POSTGRES_ROOT_PASSWORD
     files:
-      - config/postgres/production.cnf:/etc/postgres/my.cnf
       - db/production.sql:/docker-entrypoint-initdb.d/setup.sql
     directories:
-      - data:/var/lib/postgres
+      - data:/var/lib/postgresql/data
