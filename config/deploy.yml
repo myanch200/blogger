@@ -21,9 +21,8 @@ registry:
 # Inject ENV variables into containers (secrets come from .env).
 # Remember to run `kamal env push` after making changes!
 env:
-  clear:
-    DB_HOST: 195.201.3.254
   secret:
+    - DB_HOST
     - RAILS_MASTER_KEY
     - POSTGRES_ROOT_PASSWORD
     - KAMAL_REGISTRY_PASSWORD
