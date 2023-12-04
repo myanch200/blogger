@@ -28,6 +28,7 @@ env:
     - POSTGRES_ROOT_PASSWORD
     - KAMAL_REGISTRY_PASSWORD
 
+accessories:
   db:
     image: postgres:14
     host: 195.201.3.254
